@@ -4,60 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        button {
-            color:black;
-            background-color: rgb(164, 229, 255);
-        }
-        button:active{
-            color: white;
-            background-color: rgb(38, 181, 233);
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            background: rgb(95, 210, 236);
-            padding: 15px;
-        }
-        p {
-            display: flex;
-            justify-content: center;
-        }
-        p::before{
-            content: "Espirometría de calidad";
-            color: dodgerblue;
-        }
-        p:hover::before{
-            content: "Respirar para vivir";
-            color: blue;
-        }
-        form{
-            display: flex;
-            align-content: space-between;
-            justify-content: center;
-            flex-direction: column;
-        }
-        label{
-            margin-bottom: 10px;
-        }
-        input{
-            margin-bottom: 10px;
-        }
-    </style>
+   <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
 <header>
     <picture class = "header-child"> Soy un logo </picture>
 <nav class=" header-child"> Soy el menú de navegación</nav>
+<circle></circle>
 </header>
     <section>
         <p>  </p>
         <form> 
-            <label for = "name" > Ingrese su nombre y su apellido: </label>
-            <input type = "text" id = "name" placeholder="ej: vicky leiserson" required>
-            <label for="email">Ingrese su gmail:</label>
-            <input type="email" id="email" placeholder="ej victoria.leiserson@gmail.com" required>
-            <button>comenzar</button>
+            <container>
+                <input type = "text" id = "name" placeholder="Name" required>
+                <input type ="text" id = "surename" placeholder = "Surename" required>
+                <input type ="email" id="email" placeholder="Email" required>
+                <button type="submit">comenzar</button>   
+            </container>
         </form>
     </section>
 </body>

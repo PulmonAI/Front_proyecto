@@ -1,0 +1,61 @@
+button {
+    color:black;
+    background-color: rgb(164, 229, 255);
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 15px;
+}
+button:active{
+    color: white;
+    background-color: rgb(38, 181, 233);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(95, 210, 236);
+    padding: 15px;
+}
+p {
+    display: flex;
+    justify-content: center;
+}
+p::before{
+    content: "Espirometría de calidad";
+    color: dodgerblue;
+}
+p:hover::before{
+    content: "Respirar para vivir";
+    color: blue;
+}
+form{
+    justify-content: center;
+    display: flex;
+}
+label{
+    margin-bottom: 18px;
+}
+input{
+    margin-bottom: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border-color: white;
+    height: 30px;
+    width: 250px;
+}
+circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+container{
+    background-color: papayawhip;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 300px;
+    height: 400px;
+}
