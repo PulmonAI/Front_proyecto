@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            color:blue;
+        }
+        button:active{
+            color: aqua;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            background: papayawhip;
+            padding: 15px;
+        }
+        p {
+            display: flex;
+            justify-content: center;
+        }
+        p::before{
+            content: "Espirometría de calidad";
+            color: dodgerblue;
+        }
+        p:hover::before{
+            content: "Respirar para vivir";
+            color: blue;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <picture class = "header-child"> Soy un logo </picture>
+<nav class=" header-child"> Soy el menú de navegación</nav>
+</header>
+    <section>
+        <p>  </p>
+        <form> 
+            <label for = "name" > Ingrese su nombre y su apellido: </label>
+            <input type = "text" id = "name">
+            <button>comenzar</button>
+        </form>
+    </section>
+</body>
+</html>
