@@ -8,19 +8,19 @@
 </head>
 <body>
     <style>
-*{
-    background-color: src= "../Front_proyecto/imagenes";
-}
     button {
     color:black;
     background-color: rgb(164, 229, 255);
     width: 50%;
+    height: 8%;
     margin-left: 25%;
     margin-bottom: 15px;
     border-radius: 5px;
     border-color: rgb(164, 229, 255);
     border-style: dotted;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-size: medium;
 }
 button:active{
     color: white;
@@ -30,7 +30,14 @@ header {
     display: flex;
     justify-content: space-between;
     background: rgb(95, 210, 236);
-    padding: 15px;
+    padding: 6px;
+}
+circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    cursor: pointer;
 }
 p {
     display: flex;
@@ -39,6 +46,7 @@ p {
 p::before{
     content: "Watch the future of modern medicine";
     color: dodgerblue;
+    cursor: pointer;
 }
 p:hover::before{
     content: "Breathing for life";
@@ -59,13 +67,7 @@ input{
     border-radius: 5px;
     border-color: white;
     height: 30px;
-    width: 250px;
-}
-circle{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: blueviolet;
+    width: 300px;
 }
 container{
     background-color: rgb(157, 156, 156);
@@ -73,7 +75,7 @@ container{
     justify-content: center;
     flex-direction: column;
     border-radius: 15px;
-    width: 300px;
+    width: 350px;
     height: 400px;
 }
 h1{
@@ -87,6 +89,10 @@ h2{
     margin-top: 0px;
     font-size: 17px;
 }
+.fondo{
+    width: 100%;
+    height: 100%;
+}
     </style>
 <header>
     <picture class = "header-child"> Soy un logo </picture>
@@ -94,7 +100,8 @@ h2{
 <circle></circle>
 </header>
     <section>
-        <p>  </p>
+        <p>  </p>  
+        <img src="./imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
         <form> 
             <container>
                 <h1>Welcome</h1>
@@ -103,7 +110,7 @@ h2{
                 <input type ="text" id = "surename" placeholder = "Surename" required>
                 <input type ="email" id = "email" placeholder="Email" required>
                 <input type = "text" id = "medical assurance" placeholder="Medical assurance" required>
-                <button type="submit">comenzar</button>   
+                <button type="submit">Start</button>   
             </container>
         </form>
     </section>
