@@ -19,6 +19,7 @@ button {
     height: 8%;
     margin-left: 50px;
     margin-bottom: 0px;
+    margin-top: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     font-size: 17px;
@@ -26,9 +27,6 @@ button {
 button:active{
     color:rgb(115, 208, 240);
     background: none;
-}
-.b1{
-    margin-top: 25px;
 }
 header {
     display: flex;
@@ -67,8 +65,8 @@ input{
     width: 300px;
 }
 a{
-    color: rgb(16, 145, 220);
-    text-decoration: none;
+   color: rgb(16, 145, 220);
+   text-decoration: none;
 }
 container{
     background-color: rgb(198, 195, 195);
@@ -123,11 +121,12 @@ h2{
         <form> 
             <container>
                 <h1>Welcome</h1>
-                <h2>Please, log in.</h2>
+                <h2>Please, register your account.</h2>
+                <input type = "text" id = "name" placeholder="  name" required>
+                <input type = "text" id = "surename" placeholder="  surename" required>
                 <input type ="email" id = "email" placeholder="  Email" required>
                 <input type = "text" id = "password" placeholder="  password" required>
-                <button class="b1"> I have forgotten my password </button>  
-                <button class="text"><a href="../pantalla_registro/registro.html">I don't have an account</a></button> 
+                <button class="b1"> <a href="../pantalla_login/login.html"> I already have an account </a></button>  
             </container>
         </form>
     </section>
