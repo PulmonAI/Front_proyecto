@@ -25,10 +25,21 @@ button {
 }
 button:active{
     color:rgb(115, 208, 240);
-    background: none;
+    background-color: rgb(95, 194, 251);
 }
 .b1{
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+.submit{
+    color: white;
+    background-color: rgb(24, 124, 231);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-left: 135px;
+    width: 140px;
+    height: 30px;
 }
 header {
     display: flex;
@@ -43,8 +54,23 @@ header {
 }
 nav{
     font-size: 20px;
+    margin-left: 20px;
     cursor: pointer;
     color: white;
+}
+.perfil{
+    width: 50px;
+    height: 50px;
+    margin-right: 0%;
+    cursor: pointer;
+}
+.logo{
+    width: 55px;
+    height: 55px;
+    margin-top: 0%;
+    margin-left: 0%;
+    padding: 0px;
+    border: 0px;
 }
 .HOME{
 text-shadow: 2px 4px 10px rgb(255, 255, 255);
@@ -58,7 +84,7 @@ label{
 }
 input{
     margin-bottom: 18px;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-right: 15px;
     margin-top: 1px;
     border-radius: 10px;
@@ -68,6 +94,10 @@ input{
 }
 a{
     color: rgb(16, 145, 220);
+    text-decoration: none;
+}
+.a2{
+    color: white;
     text-decoration: none;
 }
 container{
@@ -107,15 +137,14 @@ h2{
     </style>
 <header>
 <figure>
-        <img src="" alt="logo" class="logo">
+        <img src="../imagenes/Icono Pulmo AI.png" alt="logo" class="logo">
     </figure>
     <nav class="HOME"> HOME </nav> 
     <nav class="NEW_PATIENT"> NEW PATIENT </nav>
-    <nav class="RECORD"> RECORD </nav>
-    <nav class="SUPPORT"> SUPPORT </nav>
+    <nav class="FORMER_PATIENT"> FORMER PATIENT </nav>
     <nav class="ABOUT_US"> ABOUT US </nav>
     <figure>
-        <img src="" alt="perfil" class="perfil">
+        <img src="../imagenes/Icono Perfil Blanco.png" alt="perfil" class="perfil">
     </figure>
 </header>
     <section>
@@ -126,8 +155,8 @@ h2{
                 <h2>Please, log in.</h2>
                 <input type ="email" id = "email" placeholder="  Email" required>
                 <input type = "text" id = "password" placeholder="  password" required>
-                <button class="b1"> I have forgotten my password </button>  
-                <button class="text"><a href="../pantalla_registro/registro.html">I don't have an account</a></button> 
+                <button class="b1"><a href="../pantalla_registro/registro.html">I don't have an account</a></button> 
+                <button class="submit"><a2 href="../pantalla_inicio/inicio.html">Submit</a2></button>
             </container>
         </form>
     </section>
