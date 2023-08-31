@@ -33,10 +33,10 @@ button:active{
     background-color: rgb(24, 124, 231);
     border-radius: 5px;
     font-size: 16px;
-    margin-top: 12px;
-    margin-left: 135px;
-    width: 140px;
-    height: 30px;
+    margin-top: 20px;
+    margin-left: 180px;
+    width: 160px;
+    height: 180px;
 }
 header {
     display: flex;
@@ -83,21 +83,28 @@ label{
 input{
     background-color: transparent;
     margin-bottom: 18px;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-right: 15px;
     margin-top: 1px;
     border: none;
     height: 30px;
     width: 300px;
+    font-style: italic;
+    font-size: 16px;
+    color: white;
+}
+input ::placeholder{
+    color: white;
 }
 td{
-    color: white;
+    color: lightblue;
 }
 a{
    color: white;
    text-decoration: none;
 }
 container{
+    color: white;
     background-color:none;
     display: flex;
     justify-content: center;
@@ -106,12 +113,15 @@ container{
     border-radius: 15px;
     width: 530px;
     height: 560px;
-    margin-top: 150px;
+    margin-top: 390px;
 }
 table{
-    margin-left: 5px;
+    margin: auto;
+    margin-left: 25px;
     margin-right: 5px;
     color: white;
+    border-style: groove;
+    border-color: white;
 }
 .fondo{
     width: 100%;
@@ -141,62 +151,66 @@ table{
         <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
         <form> 
             <container>
-                <input type="text" id="name_surename" placeholder="Name and Surename" required>
-                <input type="text" id="obra_social" placeholder="Obra social en ingles!!" required>
+                <input type="text" id="name_surename" placeholder="NAME AND SURENAME" required>
+                <input type="text" id="obra_social" placeholder="MEDICAL ASSURANCE" required>
                 <input type="number" id="dna" placeholder="DNA" required>
-                <input type="email" id="email" placeholder="Email Adress" required>
-                <input type="datetime" id="datetime" placeholder="Fecha de nacimiento en ingles!!" required>
+                <input type="email" id="email" placeholder="EMAIL ADRESS" required>
+                <input type="datetime" id="datetime" placeholder="DATE OF BIRTH" required>
                 <table border="1">
                     <tr>
                         <td>FEV1 Pre-BD Value</td>
-                        <td><input type="text" id="input_tabla"  placeholder="Escribe aquí"></td>
+                        <td><input type="text" id="input_tabla"  placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td>FEV1 Pre-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td>FEV1 Post-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FEV1 Post-BD Pred </td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FEV1 Post-BD Pred </td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FVC Pre-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FVC Pre-BD Value</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FVC Pre-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FVC Pre-BD Pred</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FVC Post-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FVC Post-BD Value</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FVC Post-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FVC Post-BD Pred</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FEF Pre-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FEF Pre-BD Value</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FEF Pre-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FEF Pre-BD Pred</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FEF Post-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FEF Post-BD Value</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
-                        <td>FEF Post-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí"></td>
+                        <td> FEF Post-BD Pred</td>
+                        <td><input type="text" placeholder="Escribe aquí" required></td>
                     </tr>
                 </table>
-                <button class="submit"><a2 href="../pantalla_inicio/inicio.html">Submit</a2></button>
+                <button class="submit">Submit</button>
+                <br> </br>
+                <br> </br>
+                <br> </br>
+                <br> </br>
             </container>
         </form>
 </section>
