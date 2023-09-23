@@ -70,11 +70,24 @@ nav{
     padding: 0px;
     border: 0px;
 }
-#NEW-PATIENT{
+#FORMER_PATIENT{
 text-shadow: 2px 4px 10px rgb(255, 255, 255);
 }
 .menu:hover{
     text-decoration: underline;
+}
+.barra{
+    margin-top: 0%;
+    padding-top: 0%;
+}
+.paciente{
+    padding: 10px; 
+    border: 1px solid white;
+    border-radius: 5px; 
+    background: transparent; 
+    color: white; 
+    width: 200px;
+    margin-top: 0%;
 }
 #id{
     margin-left: 36.5%;
@@ -163,8 +176,8 @@ table{
        <img src="../imagenes/Icono Pulmo AI.png" alt="logo" class="logo">
     </figure>
     <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a> </nav> 
-    <nav class="menu" id="NEW-PATIENT"> NEW PATIENT </nav>
-    <nav class="menu"> <a href="../pantalla_formerpatient/formerpatient.html"> FORMER PATIENT </a></nav>
+    <nav class="menu"> <a href="../pantalla_newpatient/newpatient.html"> NEW PATIENT</a></nav>
+    <nav class="menu" id="FORMER_PATIENT"> FORMER PATIENT </nav>
     <nav class="menu"> <a href="../pantalla_aboutus/aboutus.html"> ABOUT US</a></nav>
     <figure>
         <img src="../imagenes/Icono Perfil Blanco.png" alt="perfil" class="perfil">
@@ -172,6 +185,12 @@ table{
 </header>
     <section>
         <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
+        <form action="buscar.php" method="POST">
+           <container class="barra">
+            <input type="text" class="paciente" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+           </container>
+        </form>        
         <form> 
             <container> 
                 <div class="form-group">
@@ -181,7 +200,7 @@ table{
                 </div>
                 <div class="form-group">
                     <label class="label" >MEDICAL ASSURANCE:</label>
-                    <input class="subrayado" type="number" id="obra_social" required>
+                    <input class="subrayado" type="text" id="obra_social" required>
                 </div>
                 <div class="form-group">
                     <label class="label" >ID:</label>

@@ -8,18 +8,23 @@
 </head>
 <body>
  <style>
+    *{
+    margin: 0;
+    }
 body{
     margin: 0;
 }
  header {
     display: flex;
     justify-content: space-between;
+    align-self: center;
     padding: 25px;
     margin-right: 0%;
+    margin-left: 20px;
     margin-top: 0%;
     align-items: flex-start;
     position: absolute;
-    gap: 80px;
+    gap: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .fondo{
@@ -37,7 +42,6 @@ body{
     width: 50px;
     height: 50px;
     margin-right: 0%;
-    cursor: pointer;
 }
 .logo{
     width: 55px;
@@ -50,8 +54,15 @@ body{
 nav{
     font-size: 20px;
     margin-left: 20px;
+    margin-top: 1.5%;
     cursor: pointer;
     color: white;
+}
+.menu:hover{
+    text-decoration: underline;
+}
+#HOME{
+    text-shadow: 2px 4px 10px rgb(255, 255, 255);  
 }
 a{
     color: white;
@@ -86,10 +97,10 @@ p:hover::before{
     <figure>
         <img src="../imagenes/Icono Pulmo AI.png" alt="logo" class="logo">
     </figure>
-    <nav class="HOME"><a href="../pantalla_registro/registro.html"> HOME</a> </nav>
-    <nav class="NEW_PATIENT"><a href="../pantalla_newpatient/newpatient.html">NEW PATIENT</a></nav>
-    <nav class="FORMER_PATIENT"> FORMER PATIENT </nav>
-    <nav class="ABOUT_US"> ABOUT US </nav>
+    <nav class="menu" id="HOME"><a href="../pantalla_registro/registro.html"> HOME</a> </nav>
+    <nav class="menu"><a href="../pantalla_newpatient/newpatient.html">NEW PATIENT</a></nav>
+    <nav class="menu"> FORMER PATIENT </nav>
+    <nav class="menu"> <a href="../pantalla_aboutus/aboutus.html"> ABOUT US</a></nav>
     <figure>
         <img src="../imagenes/Icono Perfil Blanco.png" alt="perfil" class="perfil">
     </figure>

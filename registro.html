@@ -45,12 +45,13 @@ header {
     margin-right: 0%;
     align-items: flex-start;
     position: absolute;
-    gap: 80px;
+    gap: 100px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 nav{
     font-size: 20px;
+    margin-top: 1.5%;
     cursor: pointer;
     color: white;
 }
@@ -68,7 +69,10 @@ nav{
     padding: 0px;
     border: 0px;
 }
-.HOME{
+.menu:hover{
+    text-decoration: underline;
+}
+#HOME{
 text-shadow: 2px 4px 10px rgb(255, 255, 255);
 }
 form{
@@ -92,7 +96,7 @@ a{
    color: rgb(16, 145, 220);
    text-decoration: none;
 }
-a :nth-child(2){
+.submit-white{
     color: white;
 }
 container{
@@ -134,28 +138,54 @@ h2{
 <figure>
         <img src="../imagenes/Icono Pulmo AI.png" alt="logo" class="logo">
     </figure>
-    <nav class="HOME"> HOME </nav> 
-    <nav class="NEW_PATIENT"> NEW PATIENT </nav>
-    <nav class="FORMER_PATIENT"> FORMER PATIENT </nav>
-    <nav class="ABOUT_US"> ABOUT US </nav>
+    <nav class="menu" id="HOME"> HOME </nav> 
+    <nav class="menu"> NEW PATIENT </nav>
+    <nav class="menu"> FORMER PATIENT </nav>
+    <nav class="menu"> ABOUT US </nav>
     <figure>
         <img src="../imagenes/Icono Perfil Blanco.png" alt="perfil" class="perfil">
     </figure>
 </header>
     <section>
         <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
-        <form> 
+        <form id="formsubmit-id"> 
             <container>
                 <h1>Welcome</h1>
                 <h2>Please, register your account.</h2>
                 <input type = "text" id = "Name" placeholder="  Name" required>
                 <input type = "text" id = "Surename" placeholder="  Surename" required>
-                <input type ="email" id = "Email Adress" placeholder="  Email Adress" required>
-                <input type = "text" id = "Password" placeholder="  password" required>
+                <input type ="email" id = "email" placeholder="  Email Adress" required>
+                <input type = "password" id = "password" placeholder="  password" required>
                 <button class="b1"> <a href="../pantalla_login/login.html"> I already have an account </a></button> 
-                <button class="submit"><a href="../pantalla_inicio/inicio.html">Submit</a></button>
+                <button class="submit" id="buttonToHome">Submit</button>
             </container>
         </form>
     </section>
+    <script>
+        function validarFormulario() {
+            var email = document.getElementById('email').value;
+            var Password = document.getElementById('password').value;
+            var Surename = document.getElementById("Surename").value;
+            var name = document.getElementById("Name").value;
+
+            if (name.trim() === '' || Surename.trim() === '' || email.trim() === '' || Password.trim() === '' ){
+                return false;
+            } else {
+                return true;
+            }
+        }
+        document.getElementById('formsubmit-id').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            event.preventDefault();
+
+            if (validarFormulario()) {
+                window.location.href = "../pantalla_inicio/inicio.html";
+            }
+
+        });
+
+
+    </script>
 </body>
 </html>
