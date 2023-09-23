@@ -76,18 +76,32 @@ text-shadow: 2px 4px 10px rgb(255, 255, 255);
 .menu:hover{
     text-decoration: underline;
 }
-.barra{
-    margin-top: 0%;
-    padding-top: 0%;
-}
 .paciente{
+    margin-top: 10%;
+    padding-top: 0%;
+    position:absolute;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 29%;
+}
+.barra{
     padding: 10px; 
     border: 1px solid white;
     border-radius: 5px; 
     background: transparent; 
     color: white; 
-    width: 200px;
+    width: 400px;
     margin-top: 0%;
+}
+.lupa{
+    margin-left: 1px;
+    width: 1px;
+    background-image: url('../imagenes/Lupa\ Blanca.png');
+    background-size: cover; 
+    width: 40px;
+    height: 40px; 
+    border: none; 
+    cursor: pointer; 
 }
 #id{
     margin-left: 36.5%;
@@ -126,6 +140,7 @@ input::placeholder{
 }
 td{
     color: white;
+    width: 100%;
 }
 a{
    color: white;
@@ -141,7 +156,7 @@ container{
     border-radius: 15px;
     width: 530px;
     height: 560px;
-    margin-top: 420px;
+    margin-top: 495px;
 }
 table{
     margin: auto;
@@ -175,7 +190,7 @@ table{
 <figure>
        <img src="../imagenes/Icono Pulmo AI.png" alt="logo" class="logo">
     </figure>
-    <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a> </nav> 
+    <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a></nav> 
     <nav class="menu"> <a href="../pantalla_newpatient/newpatient.html"> NEW PATIENT</a></nav>
     <nav class="menu" id="FORMER_PATIENT"> FORMER PATIENT </nav>
     <nav class="menu"> <a href="../pantalla_aboutus/aboutus.html"> ABOUT US</a></nav>
@@ -185,12 +200,12 @@ table{
 </header>
     <section>
         <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
-        <form action="buscar.php" method="POST">
-           <container class="barra">
-            <input type="text" class="paciente" placeholder="Buscar...">
-            <button type="submit">Buscar</button>
-           </container>
-        </form>        
+       
+        <form class="paciente" action="buscar.php" method="POST">
+            <input type="text" class="barra" placeholder="Search for a patient...">
+            <button class="lupa" type="submit"></button>
+        </form>    
+
         <form> 
             <container> 
                 <div class="form-group">
@@ -217,51 +232,51 @@ table{
                 <table border="1">
                     <tr>
                         <td>FEV1 Pre-BD Value</td>
-                        <td><input type="text" id="input_tabla"  placeholder="Escribe aquí" required></td>
+                        <td><input type="number" id="input_tabla"  placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td>FEV1 Pre-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="numer" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td>FEV1 Post-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEV1 Post-BD Pred </td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Pre-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Pre-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Post-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Post-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Pre-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Pre-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Post-BD Value</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Post-BD Pred</td>
-                        <td><input type="text" placeholder="Escribe aquí" required></td>
+                        <td><input type="number" placeholder="Escribe aquí" required></td>
                     </tr>
                 </table>
                 <button class="submit">Submit</button>
