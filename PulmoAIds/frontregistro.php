@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="imagenes" type="imagenes" href="../Front_proyecto/imagenes/10px">
+    <link rel="Registro.php" href="Registro.php">
 </head>
 <body>
     <style>
@@ -112,18 +113,24 @@ h2{
         <img src="" alt="perfil" class="perfil">
     </figure>
 </header>
-    <section>
-        <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
-        <form> 
-            <container>
-                <h1>Welcome</h1>
-                <h2>Please, register your account.</h2>
-                <input type = "text" id = "name" placeholder="  Name" required>
-                <input type ="text" id = "surename" placeholder = "  Surename" required>
-                <input type ="email" id = "email" placeholder="  Email" required>
-                <button type="submit">Start</button>   
-            </container>
-        </form>
-    </section>
+<?php
+include("modelo/index.php")
+include("modelo/Registro.php")
+?>
+<section>
+    <p>  </p>  
+    <img src="./imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
+    <form method="POST"> 
+        <container>
+            <h1>Welcome</h1>
+            <h2>Please, register your account.</h2>
+            <input type = "text" id = "Nombre" placeholder="Name" required>
+            <input type ="text" id = "Apellido" placeholder = "Surename" required>
+            <input type ="email" id = "EmailID" placeholder="Email" required>
+            <input type = "text" id = "Obra social" placeholder="Medical assurance" required>
+            <button type="submit">Start</button>   
+        </container>
+    </form>
+</section>
 </body>
 </html>

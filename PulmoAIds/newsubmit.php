@@ -128,7 +128,7 @@ container{
     position: absolute;
     border-radius: 15px;
     width: 530px;
-    height: 420px;
+    height: 560px;
     margin-top: 520px;
 }
 table{
@@ -157,6 +157,22 @@ table{
 }
 .subrayado{
     border-bottom: 1px solid#fbf7f7;
+}
+.input_feedback{
+    border: 2px solid white;
+    padding: 1px;
+    width: 50%;
+    height: 100%;
+}
+.feedback{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 20px;
+}
+#input_medic{
+    margin-left: 45px;
 }
     </style>
 <header>
@@ -247,7 +263,16 @@ table{
                     </tr>
                 </table>
 
-                <button class="submit"><a href="newsubmit.html" >Submit</a></button>
+                <div class="feedback" id="diagnostico">
+                    <label class="diag">IA Diagnosis:</label>
+                    <input class="input_feedback" type="text" required id="resultField">
+                </div>
+                <div class="feedback">
+                    <label class="medic">Medication:</label>
+                    <input class="input_feedback" id="input_medic" placeholder="Type here..." type="text" required>
+                </div>
+
+                <button class="submit">Submit</button>
                 <br> </br>
                 <br> </br>
                 <br> </br>
@@ -255,5 +280,12 @@ table{
             </container>
         </form>
 </section>
+<script>
+    let res = await fetch(`http://localhost:8000/PulmoAIds?dato1=${dato1}&dato2=${dato2}&dato3=${dato3}&dato4=${dato4}&dato5=${dato5}&dato6=${dato6}&dato7=${dato7}&dato8=${dato8}&dato9=${dato9}&dato10=${dato10}&dato11=${dato11}&dato12=${dato12}`);
+    let data = await res.json();
+    console.log(data);
+
+    const respuesta = document.getElementById("resultField") = data;
+</script>
 </body>
 </html>

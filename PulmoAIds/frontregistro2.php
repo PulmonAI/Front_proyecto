@@ -146,18 +146,23 @@ h2{
         <img src="../imagenes/Icono Perfil Blanco.png" alt="perfil" class="perfil">
     </figure>
 </header>
+<?php
+include("modelo/index.php")
+include("modelo/Registro.php")
+?>
     <section>
         <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
-        <form id="formsubmit-id"> 
+        <form action="./Registro.php" method="post"> 
             <container>
                 <h1>Welcome</h1>
                 <h2>Please, register your account.</h2>
-                <input type = "text" id = "Name" placeholder="  Name" required>
-                <input type = "text" id = "Surename" placeholder="  Surename" required>
-                <input type ="email" id = "email" placeholder="  Email Adress" required>
-                <input type = "password" id = "password" placeholder="  password" required>
+                <input type = "text" name="Nombre" id = "Nombre" placeholder="Name" required>
+                <input type ="text"  name="Apellido"id = "Apellido" placeholder = "Surename" required>
+                <input type ="email" name="EmailID" id = "EmailID" placeholder="Email" required>
+                <input type = "number" name="Obra_social" id = "Obra_social" placeholder="Medical assurance" required>
+                <input type = "text" name="Clave" id = "Clave" placeholder="  password" required>
                 <button class="b1"> <a href="../pantalla_login/login.html"> I already have an account </a></button> 
-                <button class="submit" id="buttonToHome">Submit</button>
+                <button class="submit"><a href="../pantalla_inicio/inicio.html">Submit</a></button>
             </container>
         </form>
     </section>

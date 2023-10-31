@@ -28,6 +28,16 @@ button:active{
     color:rgb(115, 208, 240);
     background-color: rgb(95, 194, 251);
 }
+.submit{
+    color: white;
+    background-color: rgb(24, 124, 231);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 180px;
+    width: 160px;
+    height: 180px;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -60,38 +70,11 @@ nav{
     padding: 0px;
     border: 0px;
 }
-#FORMER_PATIENT{
+#NEW-PATIENT{
 text-shadow: 2px 4px 10px rgb(255, 255, 255);
 }
 .menu:hover{
     text-decoration: underline;
-}
-.paciente{
-    margin-top: 10%;
-    padding-top: 0%;
-    position:absolute;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 29%;
-}
-.barra{
-    padding: 10px; 
-    border: 1px solid white;
-    border-radius: 5px; 
-    background: transparent; 
-    color: white; 
-    width: 400px;
-    margin-top: 0%;
-}
-.lupa{
-    margin-left: 1px;
-    width: 1px;
-    background-image: url('../imagenes/Lupa\ Blanca.png');
-    background-size: cover; 
-    width: 40px;
-    height: 40px; 
-    border: none; 
-    cursor: pointer; 
 }
 #id{
     margin-left: 36.5%;
@@ -131,7 +114,6 @@ input::placeholder{
 }
 td{
     color: white;
-    width: 100%;
 }
 a{
    color: white;
@@ -146,8 +128,8 @@ container{
     position: absolute;
     border-radius: 15px;
     width: 530px;
-    height: 560px;
-    margin-top: 670px;
+    height: 420px;
+    margin-top: 520px;
 }
 table{
     margin: auto;
@@ -176,40 +158,14 @@ table{
 .subrayado{
     border-bottom: 1px solid#fbf7f7;
 }
-.submit{
-    color: white;
-    background-color: rgb(24, 124, 231);
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 70px;
-    margin-left: 180px;
-    width: 180px;
-    height: 200px;
-}
-.input_feedback{
-    border: 2px solid white;
-    padding: 1px;
-    width: 50%;
-    height: 100%;
-}
-.feedback{
-    display: flex;
-    flex-wrap: nowrap;
-    margin-left: 10%;
-    margin-top: 10%;
-    font-size: 20px;
-}
-#input_medic{
-    margin-left: 45px;
-}
     </style>
 <header>
 <figure>
        <img src="../imagenes/Icono Pulmo AI.png" alt="logo" class="logo">
     </figure>
-    <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a></nav> 
-    <nav class="menu"> <a href="../pantalla_newpatient/newpatient.html"> NEW PATIENT</a></nav>
-    <nav class="menu" id="FORMER_PATIENT"> FORMER PATIENT </nav>
+    <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a> </nav> 
+    <nav class="menu" id="NEW-PATIENT"> NEW PATIENT </nav>
+    <nav class="menu"> <a href="../pantalla_formerpatient/formerpatient.html"> FORMER PATIENT </a></nav>
     <nav class="menu"> <a href="../pantalla_aboutus/aboutus.html"> ABOUT US</a></nav>
     <figure>
         <img src="../imagenes/Icono Perfil Blanco.png" alt="perfil" class="perfil">
@@ -217,13 +173,7 @@ table{
 </header>
     <section>
         <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
-       
-        <form class="paciente" action="buscar.php" method="POST">
-            <input type="text" class="barra" placeholder="Search for a patient...">
-            <button class="lupa" type="submit"></button>
-        </form>    
-
-        <form action="buscar.php" method="POST"> 
+        <form onSubmit="return sendRequest(event)">  
             <container> 
                 <div class="form-group">
                     <label class="label" for="name_surname">NAME AND SURNAME:</label>
@@ -232,7 +182,7 @@ table{
                 </div>
                 <div class="form-group">
                     <label class="label" >MEDICAL ASSURANCE:</label>
-                    <input class="subrayado" type="text" id="obra_social" required>
+                    <input class="subrayado" type="number" id="obra_social" required>
                 </div>
                 <div class="form-group">
                     <label class="label" >ID:</label>
@@ -247,66 +197,57 @@ table{
                     <input class="subrayado" type="datetime" id="date" required>
                 </div>
                 <table border="1">
-                    <tr>
+                <tr>
                         <td>FEV1 Pre-BD Value</td>
-                        <td><input type="number" id="input_tabla"  placeholder="Type here" required></td>
+                        <td><input type="text" name="FEV1(1)" id="dato1" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td>FEV1 Pre-BD Pred</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FEV1(2)" id="dato2" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td>FEV1 Post-BD Value</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FEV1(3)" id="dato3" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEV1 Post-BD Pred </td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FEV1(4)" id="dato4" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Pre-BD Value</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FVC(1)" id="dato5" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Pre-BD Pred</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FVC(2)" id="dato6" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Post-BD Value</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FVC(3)" id="dato7" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FVC Post-BD Pred</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FVC(4)" id="dato8" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Pre-BD Value</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FEF(1)" id="dato9" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Pre-BD Pred</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FEF(2)" id="dato10" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Post-BD Value</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FEF(3)" id="dato11" placeholder="Escribe aquí" required></td>
                     </tr>
                     <tr>
                         <td> FEF Post-BD Pred</td>
-                        <td><input type="number" placeholder="Type here" required></td>
+                        <td><input type="text" name="FEF(4)" id="dato12" placeholder="Escribe aquí" required></td>
                     </tr>
                 </table>
 
-                    <div class="feedback" id="diagnostico">
-                        <label class="diag">IA Diagnosis:</label>
-                        <input class="input_feedback" type="text" required>
-                    </div>
-                    <div class="feedback">
-                        <label class="medic">Medication:</label>
-                        <input class="input_feedback" id="input_medic" placeholder="Type here..." type="text" required>
-                    </div>
-
-                <button class="submit">Update data</button>
+                <button class="submit"><a href="newsubmit.html" >Submit</a></button>
                 <br> </br>
                 <br> </br>
                 <br> </br>
@@ -314,5 +255,27 @@ table{
             </container>
         </form>
 </section>
+<script>
+    
+    const sendRequest = (e) => {
+        e.preventDefault();
+        alert("Hola");
+        const dato1 = document.getElementById("dato1").value;
+        const dato2 = document.getElementById("dato2").value;
+        const dato3 = document.getElementById("dato3").value;
+        const dato4 = document.getElementById("dato4").value;
+        const dato5 = document.getElementById("dato5").value;
+        const dato6 = document.getElementById("dato6").value;
+        const dato7 = document.getElementById("dato7").value;
+        const dato8 = document.getElementById("dato8").value;
+        const dato9 = document.getElementById("dato9").value;
+        const dato10 = document.getElementById("dato10").value;
+        const dato11 = document.getElementById("dato11").value;
+        const dato12 = document.getElementById("dato12").value;
+        
+        return false;
+    }
+
+</script>
 </body>
 </html>

@@ -28,16 +28,6 @@ button:active{
     color:rgb(115, 208, 240);
     background-color: rgb(95, 194, 251);
 }
-.submit{
-    color: white;
-    background-color: rgb(24, 124, 231);
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 40px;
-    margin-left: 180px;
-    width: 160px;
-    height: 180px;
-}
 header {
     display: flex;
     justify-content: space-between;
@@ -70,11 +60,38 @@ nav{
     padding: 0px;
     border: 0px;
 }
-#NEW-PATIENT{
+#FORMER_PATIENT{
 text-shadow: 2px 4px 10px rgb(255, 255, 255);
 }
 .menu:hover{
     text-decoration: underline;
+}
+.paciente{
+    margin-top: 10%;
+    padding-top: 0%;
+    position:absolute;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 29%;
+}
+.barra{
+    padding: 10px; 
+    border: 1px solid white;
+    border-radius: 5px; 
+    background: transparent; 
+    color: white; 
+    width: 400px;
+    margin-top: 0%;
+}
+.lupa{
+    margin-left: 1px;
+    width: 1px;
+    background-image: url('../imagenes/Lupa\ Blanca.png');
+    background-size: cover; 
+    width: 40px;
+    height: 40px; 
+    border: none; 
+    cursor: pointer; 
 }
 #id{
     margin-left: 36.5%;
@@ -114,6 +131,7 @@ input::placeholder{
 }
 td{
     color: white;
+    width: 100%;
 }
 a{
    color: white;
@@ -129,7 +147,7 @@ container{
     border-radius: 15px;
     width: 530px;
     height: 560px;
-    margin-top: 520px;
+    margin-top: 670px;
 }
 table{
     margin: auto;
@@ -158,6 +176,16 @@ table{
 .subrayado{
     border-bottom: 1px solid#fbf7f7;
 }
+.submit{
+    color: white;
+    background-color: rgb(24, 124, 231);
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 70px;
+    margin-left: 180px;
+    width: 180px;
+    height: 200px;
+}
 .input_feedback{
     border: 2px solid white;
     padding: 1px;
@@ -179,9 +207,9 @@ table{
 <figure>
        <img src="../imagenes/Icono Pulmo AI.png" alt="logo" class="logo">
     </figure>
-    <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a> </nav> 
-    <nav class="menu" id="NEW-PATIENT"> NEW PATIENT </nav>
-    <nav class="menu"> <a href="../pantalla_formerpatient/formerpatient.html"> FORMER PATIENT </a></nav>
+    <nav class="menu"> <a href="../pantalla_inicio/inicio.html"> HOME </a></nav> 
+    <nav class="menu"> <a href="../pantalla_newpatient/newpatient.html"> NEW PATIENT</a></nav>
+    <nav class="menu" id="FORMER_PATIENT"> FORMER PATIENT </nav>
     <nav class="menu"> <a href="../pantalla_aboutus/aboutus.html"> ABOUT US</a></nav>
     <figure>
         <img src="../imagenes/Icono Perfil Blanco.png" alt="perfil" class="perfil">
@@ -189,6 +217,13 @@ table{
 </header>
     <section>
         <img src="../imagenes/fondo_pulmoAi_inicio.jpg" alt="fondo" class="fondo">  
+       
+        <form class="paciente" action="Busqueda.php" method="POST">
+            <label for="busqueda">Buscar por nombre o DNI:</label>
+            <input type="text" class="barra" id="busqueda" name="busqueda" placeholder="Search for a patient...">
+            <button class="lupa" type="submit"></button>
+        </form>    
+
         <form> 
             <container> 
                 <div class="form-group">
@@ -198,7 +233,7 @@ table{
                 </div>
                 <div class="form-group">
                     <label class="label" >MEDICAL ASSURANCE:</label>
-                    <input class="subrayado" type="number" id="obra_social" required>
+                    <input class="subrayado" type="text" id="obra_social" required>
                 </div>
                 <div class="form-group">
                     <label class="label" >ID:</label>
@@ -263,16 +298,16 @@ table{
                     </tr>
                 </table>
 
-                <div class="feedback" id="diagnostico">
-                    <label class="diag">IA Diagnosis:</label>
-                    <input class="input_feedback" type="text" required>
-                </div>
-                <div class="feedback">
-                    <label class="medic">Medication:</label>
-                    <input class="input_feedback" id="input_medic" placeholder="Type here..." type="text" required>
-                </div>
+                    <div class="feedback" id="diagnostico">
+                        <label class="diag">IA Diagnosis:</label>
+                        <input class="input_feedback" type="text" required>
+                    </div>
+                    <div class="feedback">
+                        <label class="medic">Medication:</label>
+                        <input class="input_feedback" id="input_medic" placeholder="Type here..." type="text" required>
+                    </div>
 
-                <button class="submit">Submit</button>
+                <button class="submit">Update data</button>
                 <br> </br>
                 <br> </br>
                 <br> </br>

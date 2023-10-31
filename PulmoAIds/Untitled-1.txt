@@ -1,0 +1,1 @@
+http://127.0.0.1:8000/PulmoAIds?dato1=10&dato2=10&dato3=10&dato4=10&dato5=10&dato6=10&dato7=10&dato8=10&dato9=10&dato10=10&dato11=10&dato12=10
